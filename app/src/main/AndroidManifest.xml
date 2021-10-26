@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AstroBuff">
         <activity
+            android:name=".ISSLocationTracking"
+            android:exported="true" />
+        <activity
+            android:name=".PictureOfTheDay"
+            android:exported="true" />
+        <activity
+            android:name=".SpaceNewsUpdates"
+            android:exported="true" />
+        <activity
+            android:name=".Setting"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
