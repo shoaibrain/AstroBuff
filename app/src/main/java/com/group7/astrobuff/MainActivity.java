@@ -37,6 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     //activate ISS Location Tracking button
     public void openISSLocationTracking(View view) {
-        startActivity(new Intent(this, ISSLocationTracking.class));
+        startActivity(new Intent(this, ISS_Location.class));
     }
 }
