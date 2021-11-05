@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class PictureOfTheDay extends AppCompatActivity {
+public class PictureOfTheDayService extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class PictureOfTheDay extends AppCompatActivity {
     private String title;
     private String url;
 
-    public PictureOfTheDay(String copyright,String date, String explanation, String hdurl, String media_type, String title, String url){
+    public PictureOfTheDayService(String copyright,String date, String explanation, String hdurl, String media_type, String title, String url){
         this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
@@ -32,7 +32,7 @@ public class PictureOfTheDay extends AppCompatActivity {
 //        this.title = title;
         this.url = url;
     }
-    public  PictureOfTheDay(){}
+    public  PictureOfTheDayService(){}
 
     public String getCopyright() {
         return copyright;
