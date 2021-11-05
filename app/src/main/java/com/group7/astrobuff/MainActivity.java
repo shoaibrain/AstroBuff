@@ -66,11 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
     //activate ISS Location Tracking button
     public void openISSLocationTracking(View view) {
+<<<<<<< HEAD
         startActivity(new Intent(this, ISSLocationTracking.class));
 
         //final IssService ISS = new IssService();
         //At this point, ISS object should have all the attributes filled
         //Work on UI
         Toast.makeText(MainActivity.this, "you clicked ISS", Toast.LENGTH_SHORT).show();
+=======
+        startActivity(new Intent(this, ISS_Location.class));
+>>>>>>> b89e84ef1ff88957af52fb46065cd2ef9f19dca2
     }
 }
