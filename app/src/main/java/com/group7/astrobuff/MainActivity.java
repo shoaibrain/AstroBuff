@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     //activate Picture of the Day button
     public void openPictureOfTheDay(View view) {
         startActivity(new Intent(this, PictureOfTheDay.class));
-        System.out.println("Pic ofthe day!!!!");
+        System.out.println("Pic of the day!!!!");
     }
 
     //activate ISS Location Tracking button
