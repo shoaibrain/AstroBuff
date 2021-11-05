@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Astro Buff</string>
+<<<<<<< HEAD
 
     <string name="text">
     Where do the dark streams of dust in the Orion Nebula originate?
@@ -31,4 +32,7 @@
 
 
 
+=======
+    <string name="title_activity_iss_location">ISS_Location</string>
+>>>>>>> 3f87355b4efa7e221e79d7be3ef7e97723fd088e
 </resources>

@@ -3,13 +3,8 @@ package com.group7.astrobuff;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
-
-public class PictureOfTheDay extends AppCompatActivity {
-
-    ImageView imageView;
+public class PictureOfTheDayService extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +13,6 @@ public class PictureOfTheDay extends AppCompatActivity {
 
         //set page title
         getSupportActionBar().setTitle("Picture of the Day");
-
-        imageView = findViewById(R.id.imageview);
-
-        String url = "https://apod.nasa.gov/apod/image/2110/OrionStreams_Saukkonen_2048.jpg";
-
-        Picasso.get().load(url).fit().into(imageView);
-
     }
 
     private String copyright;
@@ -35,7 +23,7 @@ public class PictureOfTheDay extends AppCompatActivity {
     private String title;
     private String url;
 
-    public PictureOfTheDay(String copyright,String date, String explanation, String hdurl, String media_type, String title, String url){
+    public PictureOfTheDayService(String copyright,String date, String explanation, String hdurl, String media_type, String title, String url){
         this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
@@ -44,7 +32,7 @@ public class PictureOfTheDay extends AppCompatActivity {
 //        this.title = title;
         this.url = url;
     }
-    public  PictureOfTheDay(){}
+    public  PictureOfTheDayService(){}
 
     public String getCopyright() {
         return copyright;

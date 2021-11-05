@@ -3,12 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/drawable/border.xml" value="0.14635416666666667" />
+=======
+        <entry key="../../../../layout/custom_preview.xml" value="0.41773504273504275" />
+>>>>>>> 3f87355b4efa7e221e79d7be3ef7e97723fd088e
         <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/layout/activity_isslocattion_tracking.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/layout/activity_picture_of_the_day.xml" value="0.2105978260869565" />
         <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/layout/activity_setting.xml" value="0.1" />
+<<<<<<< HEAD
         <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/layout/activity_space_news_updates.xml" value="0.264" />
+=======
+        <entry key="..\:/Users/saong/AstroBuff/app/src/main/res/layout/activity_space_news_updates.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_iss_location.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
+>>>>>>> 3f87355b4efa7e221e79d7be3ef7e97723fd088e
       </map>
     </option>
   </component>
