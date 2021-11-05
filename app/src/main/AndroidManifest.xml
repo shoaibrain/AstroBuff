@@ -2,7 +2,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.group7.astrobuff">
+<<<<<<< HEAD
+
+    <uses-permission android:name="android.permission.INTERNET">
+
+    </uses-permission>
+
+=======
     <uses-permission android:name="android.permission.INTERNET"/>
+>>>>>>> 3f87355b4efa7e221e79d7be3ef7e97723fd088e
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

@@ -1,4 +1,38 @@
 <resources>
     <string name="app_name">Astro Buff</string>
+<<<<<<< HEAD
+
+    <string name="text">
+    Where do the dark streams of dust in the Orion Nebula originate?
+        This part of the Orion Molecular Cloud Complex, M43, is the often imaged but rarely mentioned neighbor of the more famous M42.
+        M42, seen in part to the upper right, includes many bright stars from the Trapezium star cluster.
+        M43 is itself a star forming region that displays intricately-laced streams of dark dust -- although it is really composed mostly of glowing hydrogen gas.
+        The entire Orion field is located about 1600 light years away. Opaque to visible light, the picturesque dark dust is created in the outer atmosphere of massive cool stars and expelled by strong outer winds of protons and electrons.
+    </string>
+
+    <string name="title_a">
+    Searching for Planets: New Mission Goes Rogue; Possible Extragalactic Planet Found
+    </string>
+
+    <string name="title_b">
+    Early Universe Star Formation Came in Bursts
+    </string>
+
+    <string name="title_c">
+    SRocket Roundup for October 20, 2021"
+    </string>
+
+    <string name="title_d">
+    News Roundup: A Post-Hiatus Look at Stories We Missed
+    </string>
+
+    <string name="title_e">
+    Perseverance Images Confirm Jezero Crater as Ancient Lake
+    </string>
+
+
+
+=======
     <string name="title_activity_iss_location">ISS_Location</string>
+>>>>>>> 3f87355b4efa7e221e79d7be3ef7e97723fd088e
 </resources>

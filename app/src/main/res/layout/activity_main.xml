@@ -20,25 +20,36 @@
         android:textColor="@color/black"
         android:textSize="20dp" />
 
-    <!--Setting button-->
-    <Button
-        android:layout_below="@+id/tv"
+    <!--Space Background-->
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Setting"
-        android:onClick="openSetting"
-        android:textSize="20dp" />
+        android:layout_height="205dp"
+        android:src="@drawable/news" />
+
+    <!--Picture of the Day Background-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginTop="171dp"
+        android:src="@drawable/day" />
+
+    <!--iss Background-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_marginTop="390dp"
+        android:src="@drawable/iss" />
+
 
     <!--Space News/Update button-->
     <Button
-        android:layout_below="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
         android:layout_centerInParent="true"
         android:layout_marginTop="60dp"
+        android:backgroundTint="#1B24B1"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:onClick="openSpaceNewsUpdates"
         android:text="Space News/Updates"
@@ -46,11 +57,12 @@
 
     <!--Picture of the Day button-->
     <Button
-        android:layout_below="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
         android:layout_centerInParent="true"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="245dp"
+        android:backgroundTint="#A67123"
         android:gravity="center"
         android:onClick="openPictureOfTheDay"
         android:text="Picture of the Day"
@@ -58,14 +70,27 @@
 
     <!--ISS Location Tracking button-->
     <Button
-        android:layout_below="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
         android:layout_centerInParent="true"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="460dp"
+        android:backgroundTint="#08A3F8"
         android:gravity="center"
         android:onClick="openISSLocationTracking"
         android:text="ISS Location Tracking"
         android:textSize="20dp" />
+
+    <!--Setting button-->
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:onClick="openSetting"
+        android:scaleType="fitCenter"
+        android:src="@drawable/setting"
+        android:background="@drawable/border"/>
+
 
 </RelativeLayout>

@@ -56,12 +56,16 @@ public class MainActivity extends AppCompatActivity {
     //activate Picture of the Day button
     public void openPictureOfTheDay(View view) {
         startActivity(new Intent(this, PictureOfTheDay.class));
+<<<<<<< HEAD
+        System.out.println("Pic of the day!!!!");
+=======
         //final PictureOfTheDayService POD = new PictureOfTheDayService();
         //At this point, PIC_OF_THE_DAY object should have all the attributes filled
         //Work on UI
 
 
     //Toast.makeText(MainActivity.this, "you clicked Picture", Toast.LENGTH_SHORT).show();
+>>>>>>> 3f87355b4efa7e221e79d7be3ef7e97723fd088e
     }
 
     //activate ISS Location Tracking button
