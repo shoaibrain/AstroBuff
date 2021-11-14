@@ -41,6 +41,14 @@ public class NewsDataModel {
         return author;
     }
 
+    public String getUrlToImage() {
+        return urlToImage;
+    }
+
+    public void setUrlToImage(String urlToImage) {
+        this.urlToImage = urlToImage;
+    }
+
     public void setAuthor(String author) {
         this.author = author;
     }
