@@ -2,7 +2,11 @@ package com.group7.astrobuff;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -22,7 +26,7 @@ public class SpaceNewsUpdates extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_space_news_updates);
         //set page title
-        getSupportActionBar().setTitle("Space News/Updates");
+        getSupportActionBar().setTitle("News|Updates");
         //load data
         ArrayList<NewsDataModel> NEWS = new ArrayList<NewsDataModel>();
         //five news object
@@ -51,25 +55,101 @@ public class SpaceNewsUpdates extends AppCompatActivity {
                             for (int i = 0; i< 5; i++){
                                 JSONObject current = results.getJSONObject(i);
 
-                                String name = current.getString("source_id");
-                                String title = current.getString("title");
-                                String url = current.getString("link");
-                                String urlToImage = current.getString("image_url");
-                                String description = current.getString("description");
-                                String published_time = current.getString("pubDate");
-
                                 //Update news object
-                                NEWS.get(i).setTitle(title);
-                                NEWS.get(i).setName(name);
-                                NEWS.get(i).setDescription(description);
-                                NEWS.get(i).setUrl(url);
-                                NEWS.get(i).setUrlToImage(urlToImage);
-                                NEWS.get(i).setPublished_time(published_time);
+                                NEWS.get(i).setTitle(current.getString("title"));
+                                NEWS.get(i).setName(current.getString("source_id"));
+                                NEWS.get(i).setDescription(current.getString("description"));
+                                NEWS.get(i).setUrl(current.getString("link"));
+                                NEWS.get(i).setUrlToImage(current.getString("image_url"));
+                                NEWS.get(i).setPublished_time(current.getString("pubDate"));
 
                             }
 
                             //Update UI here
-                            Toast.makeText(SpaceNewsUpdates.this, "Status:"+status + "\nURL:"+NEWS.get(0).getUrl()+"\nTitle:"+NEWS.get(0).getTitle(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(SpaceNewsUpdates.this, "Status:"+status + "\nURL:"+NEWS.get(0).getUrl()+"\nTitle:"+NEWS.get(0).getTitle(), Toast.LENGTH_LONG).show();
+
+                            //Article 1
+                            Button newsText0 = (Button) findViewById(R.id.link_a);
+                            newsText0.setText(NEWS.get(0).getTitle());
+                            Button article_a = (Button) findViewById(R.id.link_a);
+                            article_a.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String url_a = NEWS.get(0).getUrl();
+                                    Intent i = new Intent(Intent.ACTION_VIEW);
+                                    i.setData(Uri.parse(url_a));
+                                    startActivity(i);
+                                }
+                            });
+
+                            //Article 2
+                            Button newsText1 = (Button) findViewById(R.id.link_b);
+                            newsText1.setText(NEWS.get(1).getTitle());
+                            Button article_b = (Button) findViewById(R.id.link_b);
+                            article_b.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String url_b = NEWS.get(1).getUrl();
+                                    Intent i = new Intent(Intent.ACTION_VIEW);
+                                    i.setData(Uri.parse(url_b));
+                                    startActivity(i);
+                                }
+                            });
+
+                            //Article 3
+                            Button newsText2 = (Button) findViewById(R.id.link_c);
+                            newsText2.setText(NEWS.get(2).getTitle());
+
+                            Button article_c = (Button) findViewById(R.id.link_c);
+                            article_c.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String url_c = NEWS.get(2).getUrl();
+                                    Intent i = new Intent(Intent.ACTION_VIEW);
+                                    i.setData(Uri.parse(url_c));
+                                    startActivity(i);
+                                }
+                            });
+
+                            //Article 4
+                            Button newsText3 = (Button) findViewById(R.id.link_d);
+                            newsText3.setText(NEWS.get(3).getTitle());
+                            Button article_d = (Button) findViewById(R.id.link_d);
+                            article_d.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String url_d= NEWS.get(3).getUrl();
+                                    Intent i = new Intent(Intent.ACTION_VIEW);
+                                    i.setData(Uri.parse(url_d));
+                                    startActivity(i);
+                                }
+                            });
+
+                            //Article 5
+                            Button newsText4 = (Button) findViewById(R.id.link_e);
+                            newsText4.setText(NEWS.get(4).getTitle());
+                            Button article_e = (Button) findViewById(R.id.link_e);
+                            article_e.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String url_e = NEWS.get(4).getUrl();
+                                    Intent i = new Intent(Intent.ACTION_VIEW);
+                                    i.setData(Uri.parse(url_e));
+                                    startActivity(i);
+                                }
+                            });
+
+                            //Article more
+                            Button article_more = (Button) findViewById(R.id.link_more);
+                            article_more.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String url_more = "https://cosmoquest.org/x/dailyspace/";
+                                    Intent i = new Intent(Intent.ACTION_VIEW);
+                                    i.setData(Uri.parse(url_more));
+                                    startActivity(i);
+                                }
+                            });
 
 
                         } catch (JSONException e) {
@@ -82,7 +162,7 @@ public class SpaceNewsUpdates extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         // TODO: Handle error
                         System.out.println("error");
-
+                        Toast.makeText(SpaceNewsUpdates.this, "Error on GET", Toast.LENGTH_LONG).show();
                     }
                 });
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
