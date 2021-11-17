@@ -20,19 +20,16 @@ public class MainActivity extends AppCompatActivity {
     //activate Setting button
     public void openSetting(View view) {
         startActivity(new Intent(this, Setting.class));
-        System.out.println("settings Button clicked!!!!");
     }
 
     //activate Space News/Updates button
     public void openSpaceNewsUpdates(View view) {
         startActivity(new Intent(this, SpaceNewsUpdates.class));
-        System.out.println("News Button clicked!!!!");
     }
 
     //activate Picture of the Day button
     public void openPictureOfTheDay(View view) {
         startActivity(new Intent(this, PictureOfTheDay.class));
-        System.out.println("Pic of the day!!!!");
     }
 
     //activate ISS Location Tracking button

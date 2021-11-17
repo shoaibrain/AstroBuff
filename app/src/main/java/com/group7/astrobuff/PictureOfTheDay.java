@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -13,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,6 +23,8 @@ import org.json.JSONObject;
 public class PictureOfTheDay extends AppCompatActivity {
     //create PictureOfTheDay object
     PictureOfTheDayModel pic = new PictureOfTheDayModel();
+
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +34,9 @@ public class PictureOfTheDay extends AppCompatActivity {
         getSupportActionBar().setTitle("Picture of the Day");
 
         //load the data
-        String url = "https://api.nasa.gov/planetary/apod?api_key=Z6MmKdvGYkuc84Ecrwyw3IVHERWISk6z7gYasW16";
+        String URL = "https://api.nasa.gov/planetary/apod?api_key=Z6MmKdvGYkuc84Ecrwyw3IVHERWISk6z7gYasW16";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
 
                     @Override
                     public void onResponse(JSONObject response) {
@@ -46,7 +51,11 @@ public class PictureOfTheDay extends AppCompatActivity {
                             pic.setUrl(response.getString("url"));
 
                             //Update UI here
-                            Toast.makeText(PictureOfTheDay.this, "image url:"+pic.getUrl() + "\nDescription:"+pic.getExplanation(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(PictureOfTheDay.this, "image url:"+pic.getUrl() + "\nDescription:"+pic.getExplanation(), Toast.LENGTH_LONG).show();
+                            imageView = findViewById(R.id.imageview);
+                            Picasso.get().load(pic.getUrl()).fit().into(imageView);
+                            TextView pictText = (TextView)findViewById(R.id.pict);
+                            pictText.setText(pic.getExplanation());
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -59,6 +68,7 @@ public class PictureOfTheDay extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         // TODO: Handle error
                         System.out.println("error");
+                        Toast.makeText(PictureOfTheDay.this, "Error on Get", Toast.LENGTH_SHORT).show();
 
                     }
                 });

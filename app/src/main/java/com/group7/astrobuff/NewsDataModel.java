@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class NewsDataModel {
-    //    Your API key is: 022fe3fd32334e498ec0bafaa47487e
-//    Consume from here: https://newsapi.org/s/us-science-news-api
     private String name;
     private String author;
-    private  String title;
+    private String title;
     private String description;
     private String url;
     private String urlToImage;
